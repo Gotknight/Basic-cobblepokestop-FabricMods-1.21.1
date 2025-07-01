@@ -94,8 +94,8 @@ public class PokestopBlock extends Block implements BlockEntityProvider {
 
             // Give rewards from all pools based on their weight
             for (RewardPool pool : rewardPools) {
-                // Use weight as number of rolls/chances to get this item
-                for (int i = 0; i < pool.getWeight(); i++) {
+                //Use the number of rolls/chances to get this item
+                for (int i = 0; i < pool.getRoll(); i++) {
                     // Get item from registry
                     Item item = Registries.ITEM.get(Identifier.tryParse(pool.getItem()));
 
@@ -107,7 +107,7 @@ public class PokestopBlock extends Block implements BlockEntityProvider {
                             player.dropItem(reward, false);
                         }
 
-                        Cobblepokestop.LOGGER.info("Gave player: " + pool.getItem() + " x" + pool.getCount() + " (roll " + (i + 1) + "/" + pool.getWeight() + ")");
+                        Cobblepokestop.LOGGER.info("Gave player: " + pool.getItem() + " x" + pool.getCount() + " (roll " + (i + 1) + "/" + pool.getRoll() + ")");
                     } else {
                         Cobblepokestop.LOGGER.warn("Invalid item: " + pool.getItem() + ". Skipping this reward.");
                     }

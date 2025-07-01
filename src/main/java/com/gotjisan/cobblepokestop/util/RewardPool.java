@@ -3,15 +3,15 @@ package com.gotjisan.cobblepokestop.util;
 public class RewardPool {
     private String item;
     private int count;
-    private int weight;
+    private int roll;
 
     // Default constructor for JSON deserialization
     public RewardPool() {}
 
-    public RewardPool(String item, int count, int weight) {
+    public RewardPool(String item, int count, int roll) {
         this.item = item;
         this.count = count;
-        this.weight = weight;
+        this.roll = roll;
     }
 
     // Getters and setters
@@ -19,32 +19,19 @@ public class RewardPool {
         return item;
     }
 
-    public void setItem(String item) {
-        this.item = item;
-    }
-
     public int getCount() {
         return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public int getRoll() {
+        return roll;
     }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
     @Override
     public String toString() {
         return "RewardPool{" +
                 "item='" + item + '\'' +
                 ", count=" + count +
-                ", weight=" + weight +
+                ", roll=" + roll +
                 '}';
     }
 }

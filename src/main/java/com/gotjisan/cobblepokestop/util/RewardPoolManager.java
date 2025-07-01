@@ -6,12 +6,9 @@ import com.gotjisan.cobblepokestop.Cobblepokestop;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,8 +70,8 @@ public class RewardPoolManager {
 
     private static List<RewardPool> getDefaultRewardPools() {
         List<RewardPool> defaultPools = new ArrayList<>();
-        defaultPools.add(new RewardPool("minecraft:apple", 5, 10));
-        defaultPools.add(new RewardPool("minecraft:diamond", 1, 2));
+        defaultPools.add(new RewardPool("minecraft:apple", 5, 1));
+        defaultPools.add(new RewardPool("minecraft:diamond", 1, 1));
         return defaultPools;
     }
 
